@@ -8,16 +8,16 @@ let array1 = [23, 64, 811, 53, 299, 101, 49];
 let array2 = [1, 4, 6, 2, 8, 3, 9, 5, 0, 7];
 
 // BASIC SYNTAX
-function findHighestValue(arr) {
-    let highest = arr[0];
-    for (let i=1; i<arr.length; i++) {
-        if (arr[i] > highest) {
-            highest = arr[i];
-        }
-    }
-    let index = arr.indexOf(highest);
-    return index;
-}
+// function findHighestValue(arr) {
+//     let highest = arr[0];
+//     for (let i=1; i<arr.length; i++) {
+//         if (arr[i] > highest) {
+//             highest = arr[i];
+//         }
+//     }
+//     let index = arr.indexOf(highest);
+//     return index;
+// }
 
 // NEW SYNTAX, MORE CONCISE
 // const findHighestValue = (arr) => {

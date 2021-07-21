@@ -6,29 +6,29 @@
     Bonus: What about edge cases like a single letter or an empty string? What about a very long string?
 */
 
-console.time("optimization check");
+console.time("optimization check"); // console.timeEnd is at the bottom of the file
 
 let string1 = "bdsagbgagggaaatttyyyyau"; // 4 y
 let string2 = "aabccc"; // 3 c
 let string3 = "hhhhhgggggiiiiiiiijjjkkkkllmmmm"; // 8 i
 
 // BASIC APPROACH
-const findLongestSubstringLength = (str) => {
-    let substringLength = 1;
-    let longest = 1;
-    for (let i=1; i<str.length; i++) {
-        if (str[i] === str[i-1]) {
-            substringLength++;
-            if (substringLength > longest) longest = substringLength;
-        } else {
-            substringLength = 1;
-        }
-    }
-    return longest;
-};
+// const findLongestSubstringLength = (str) => {
+//     let substringLength = 1;
+//     let longest = 1;
+//     for (let i=1; i<str.length; i++) {
+//         if (str[i] === str[i-1]) {
+//             substringLength++;
+//             if (substringLength > longest) longest = substringLength;
+//         } else {
+//             substringLength = 1;
+//         }
+//     }
+//     return longest;
+// };
 
 // ALTERNATE APPROACH - BETTER OPTIMIZATION
-const findLongestSubstringLength = (str) => {
+const findLongestSubstringLength = str => {
     if (str.length < 1) return 0; // edge case
     let alpha = "abcdefghijklmnopqrstuvwxyz".split("");
     let longest = 1;

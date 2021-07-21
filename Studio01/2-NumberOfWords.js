@@ -8,26 +8,26 @@ let string1 = "Hello, world!";
 let string2 = "This is a sentence of undetermined length.";
 
 // BASIC SYNTAX
-function getLengthOfString(str) {
-    str = str.trim(); // edge case
-    if (str === "") { // edge case
-        return 0;
-    }
-    let count = 1;
-    for (let i=0; i < str.length; i++) {
-        if (str[i] === " ") {
-            count++;
-        }
-    }
-    return count;
-}
+// function getLengthOfString(str) {
+//     str = str.trim(); // edge case
+//     if (str === "") { // edge case
+//         return 0;
+//     }
+//     let count = 1;
+//     for (let i=0; i < str.length; i++) {
+//         if (str[i] === " ") {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
 
 // MORE CONCISE
-// const getLengthOfString = (str) => {
-//     trimmed = str.trim();
-//     if (trimmed === "") return 0;
-//     return trimmed.split(" ").length;
-// };
+const getLengthOfString = (str) => {
+    trimmed = str.trim();
+    if (trimmed === "") return 0;
+    return trimmed.split(" ").length;
+};
 
 // TRY IT OUT
 console.log(getLengthOfString(string1));
